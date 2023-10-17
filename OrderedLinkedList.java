@@ -40,23 +40,18 @@ public class OrderedLinkedList<T extends Comparable<T>> {
 	
 	
 	public T get(int i) throws IndexOutOfBoundsException {
-		size = getSize();
-		if (i < 0 || i >= size) {
-			throw new IndexOutOfBoundsException();
-		}
-		else {
-		for (int j = 0;j<i;j++) {
-			
-			if (j != i) {
-				++j;
-				head = head.getNext();
-				
-			}
-			
-								}
-		}
-		return (head.getData());
-		}
+	    if (i < 0 || i >= size) {
+	        throw new IndexOutOfBoundsException();
+	    }
+	    
+	    Node<T> current = head;
+	    
+	    for (int j = 0; j < i; j++) {
+	        current = current.getNext();
+	    }
+	    
+	    return current.getData();
+	}
 	
 	
 	public int getSize() {
