@@ -12,7 +12,7 @@ public class Polynomial{
 		Polynomial newPolynomial = null; 
 	}
 	
-	//Add method, used to insert a new monomial to the OrderedLinkedList object. 
+	//Void add method, used to insert a new monomial to the OrderedLinkedList object. 
 	public void add(int coefficient, int degree) //@param, the monomials coefficient and degree. 
 	{
 		//initialize and insert a new monomial object  named "newMonomial" that holds the coefficient and degree. 
@@ -20,8 +20,8 @@ public class Polynomial{
 		Polynomial.insert(newMonomial);
 		
 	}
-	/*Derivative method, used to obtain a new polynomial containing the derivative of the polynomial 
-	 * stored as monomials in the OrderedLinkedList object. 
+	/*Derivative method, returns a Polynomial object, used to obtain a new polynomial containing the derivative of 
+	 * the polynomial stored as monomials in the OrderedLinkedList object. 
 	*/
 	public Polynomial derivative()
 	{
@@ -46,7 +46,7 @@ public class Polynomial{
 		return  newPolynomial; //@return the new polynomial object containing the derivative. 
 	}
 	
-	//eval method, used to evaluate the polynomial at a given double value. 
+	//eval method, returns a double, used to evaluate the polynomial at a given double value. 
 	public double eval(double x) //@param, double value which the polynomial will be evaluated at
 	{
 		double evaluation = 0.0;
@@ -69,7 +69,7 @@ public class Polynomial{
 		return evaluation; //@return, new double obtained after evaluating polynomial. 
 	}
 	
-	//toString method, used to return the polynomial as a string
+	//toString method, returns a string, used to return the polynomial as a string
 	public String toString() 
 	{
 		String polyAsString = "";
@@ -101,7 +101,7 @@ public class Polynomial{
 		return (polyAsString); //@return, new string describing the polynomial 
 	}
 	
-	//solve method, used to find the solution of the polynomial using Newton's method. 
+	//solve method, returns a double, used to find the solution of the polynomial using Newton's method. 
 	public double solve (double x0, double e, int T) throws SolutionNotFound //@param, initial value, stop value, and max attempts.
 	{
 		double current = 0.0;
